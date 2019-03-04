@@ -18,23 +18,19 @@ export class ProductsComponent implements OnInit {
       currentProduct.numberLike--;
     }
   }
-
-
-
-
   private products: Product[];
 
-
   constructor(private productService: ProductService) { }
-  public count: number;
+
+  public count: number = 0;
   sendNumber() {
-    this.productService.sendNumber(this.increament);
+    this.productService.sendNumber(this.increament());
   }
 
-
-  increament():void{
+  increament() {
     this.count += 1;
     console.log("done");
+    return this.count;
   }
   ngOnInit() {
     this.products = this.productService.findAll();

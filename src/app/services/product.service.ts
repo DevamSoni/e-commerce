@@ -32,7 +32,7 @@ export class ProductService {
 
   private subject = new Subject<any>();
 
-  sendNumber(number:any){
+  sendNumber(number:number){
     this.subject.next({text:number});
   }
 
