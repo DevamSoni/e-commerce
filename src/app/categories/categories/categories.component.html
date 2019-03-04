@@ -1,0 +1,10 @@
+  <aside class="left-sidebar">
+    <h2>Categories</h2>
+    <ul>
+      <a>
+        <li *ngFor="let category of categories" 
+        (click)="onCategorySelection(category)" 
+        >{{category.name}}</li>
+      </a>
+    </ul>
+  </aside>

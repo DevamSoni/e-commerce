@@ -1,0 +1,18 @@
+        <ul>
+          <li *ngFor="let product of products">
+            <div class="col-md-2 col-sm-6 col-xs-6" data-toggle="modal" data-target="#product_view">
+              <div class="thumbnail">
+                <img [src]="product.photo" alt="" class="img-responsive">
+                <div class="caption">
+                  <h4 class="pull-right">₹{{product.price}}</h4>
+                  <h5><a href="#">{{product.name | ellipsis:7}}</a></h5>
+                  <!-- <span class="glyphicon glyphicon-heart icon" (click)="LikeButton(products.id)"></span> -->
+                  <!-- <span class="count">{{products.numberLike}}</span> -->
+                  <a [routerLink]="['/cart' ,{id:product.id}]">Add to cart</a>
+                  <br><button (click)="sendNumber()">Like</button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+  

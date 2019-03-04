@@ -1,0 +1,6 @@
+<div class="col-md-2 hidden-sm hidden-xs">
+  <app-categories (categorySelection)="handleCategoryChange($event)"></app-categories>
+</div>
+<div class="col-md-10">
+  <app-products [productList]="productList"></app-products>
+</div>

@@ -1,0 +1,20 @@
+.product_view .modal-dialog{
+    max-width: 800px; 
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+}
+img{
+    max-height: 110px;
+    min-height: 110px;
+}
+span{
+    font-size: 18px;
+}
+.count{
+    color: #888888;
+}
+.icon{
+    margin-right: 10px;
+}

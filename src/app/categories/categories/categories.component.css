@@ -1,0 +1,26 @@
+.col-md-2{
+    padding: 0;
+}
+ul{
+    padding: 0;
+    margin: 5px 0 0 0;
+    border-radius: 4px;
+    width: 100%;
+    float: left;
+  }
+  ul a{
+      text-decoration: none;
+      color: #000;
+  }
+  li{
+    padding: 15px 0 15px 20px;
+    list-style: none;
+    border-bottom: 1px solid #e6e6e6;
+    position: relative;
+  }
+  li:hover{
+      background: #ececec;
+  }
+  h2{
+      text-align: center;
+  }
