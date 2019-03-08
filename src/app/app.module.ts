@@ -11,7 +11,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
 import { CartModule } from './cart/cart.module';
 // import { EllipsisPipe } from './pipes/ellipsis.pipe';
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
 
+
+
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDEFwS4MmlTW_QfXGMnkYs93O2oP0Lbe4I",
+    authDomain: "angular-auth-firebase-d7e1e.firebaseapp.com",
+    databaseURL: "https://angular-auth-firebase-d7e1e.firebaseio.com",
+    projectId: "angular-auth-firebase-d7e1e",
+    storageBucket: "angular-auth-firebase-d7e1e.appspot.com",
+    messagingSenderId: "639806368995"
+  };
+  
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +38,9 @@ import { CartModule } from './cart/cart.module';
     ProductParentModule,
     LoginModule,
     RouterModule,
-    CartModule
+    CartModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule
   ],
   bootstrap: [AppComponent]
 })
