@@ -6,24 +6,6 @@ import { User } from "firebase";
 
 @Injectable({ providedIn: "root" })
 export class AuthService {
-  // loggedIn = false;
-
-  // isAuthenticated() {
-  //   const promise = new Promise((resolve, reject) => {
-  //     setTimeout(() => {
-  //       resolve(this.loggedIn);
-  //     }, 800);
-  //   });
-  //   return promise;
-  // }
-
-  // login() {
-  //   this.loggedIn = true;
-  // }
-
-  // logout() {
-  //   this.loggedIn = false;
-  // }
 
   user: User;
   constructor(public afAuth: AngularFireAuth, public router: Router) {
@@ -48,7 +30,7 @@ export class AuthService {
     async logout(){
       await this.afAuth.auth.signOut();
       localStorage.removeItem('user');
-      this.router.navigate(['admin/login']);
+      this.router.navigate(['/']);
   }
   get isLoggedIn(): boolean {
     const  user  =  JSON.parse(localStorage.getItem('user'));
